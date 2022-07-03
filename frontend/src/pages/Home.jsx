@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import { client } from '../client';
 import { userQuery } from '../utils/data';
+import {fetchUser} from '../utils/fetchUser'
 import Pin from './Pin';
 
 const Home = () => {
@@ -10,11 +11,8 @@ const Home = () => {
   const scrollRef = useRef(null);
 
   useEffect(() => {
-      // Get user info from local storage
-    const userInfo =
-    localStorage.getItem('user') !== 'undefined'
-      ? JSON.parse(localStorage.getItem('user'))
-      : localStorage.clear();
+    // Get user info from local storage
+    const userInfo = fetchUser()
     // Remember we set googleId as userId in Sanity
     const query = userQuery(userInfo?.googleId);
     // Fetch userinfo from Sanity and set it to the state

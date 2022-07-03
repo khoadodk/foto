@@ -15,15 +15,6 @@ const categories = [
   {name: "Places"},
   {name: "Art"},
   {name: "Crypto"},
-  {name: "Animals"},
-  {name: "Nature"},
-  {name: "Funny"},
-  {name: "Food"},
-  {name: "Travel"},
-  {name: "Weird"},
-  {name: "Places"},
-  {name: "Art"},
-  {name: "Crypto"},
 ]
 
 const NavBar = ({searchTerm, setSearchTerm, user}) => {
@@ -109,7 +100,7 @@ const NavBar = ({searchTerm, setSearchTerm, user}) => {
             className="flex items-center w-full overflow-y-hidden hide_scrollbar scroll-smooth duration-150 ease-in-out"
             id="category"
           >
-            {categories.slice(0, categories.length - 1).map((category) => (
+            {categories.map((category) => (
               <NavLink
                 key={category.name}
                 to={`/category/${category.name}`}
