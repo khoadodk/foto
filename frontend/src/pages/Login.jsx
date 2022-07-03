@@ -5,7 +5,8 @@ import { FcGoogle } from 'react-icons/fc';
 import { gapi } from 'gapi-script';
 
 import video from '../assets/video.mp4';
-import logo from '../assets/watchme.png';
+import logo from '../assets/logo.png';
+import { client } from '../client';
 
 const Login = () => {
   useEffect(() => {
@@ -19,8 +20,22 @@ const Login = () => {
     gapi.load('client:auth2', start);
   }, []);
 
+  const navigate = useNavigate();
+
   const responseGoogle = (res) => {
-    console.log(res);
+    localStorage.setItem('user', JSON.stringify(res.profileObj));
+
+    const { name, imageUrl, googleId } = res.profileObj;
+    // Save user data into sanity
+    const doc = {
+      _id: googleId,
+      _type: 'user',
+      username: name,
+      image: imageUrl,
+    };
+    client.createIfNotExists(doc).then(() => {
+      navigate('/', { replace: true });
+    });
   };
 
   return (
