@@ -5,6 +5,12 @@
 ## Challenges
 
 - State management: Redux/Context API needed as the project getting bigger and the state is getting messier.
+- Google OAuth API is migrating to v2 causing bugs.
+
+## Todo List
+
+- Add state management.
+- Add email/password OAuth system using firebase authentication.
 
 ## Tech choice
 

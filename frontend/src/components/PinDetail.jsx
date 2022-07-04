@@ -60,6 +60,7 @@ const PinDetail = ({ user }) => {
 
   useEffect(() => {
     fetchPinDetails();
+    // eslint-disable-next-line
   }, [pinId]);
 
   if (!pinDetail) return <Spinner msg={'Loading Pin Detail'} />;
