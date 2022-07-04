@@ -15,7 +15,7 @@ export default {
     },
     {
       name: 'destination',
-      title: 'Destination',
+      title: 'Desitination',
       type: 'url',
     },
     {
@@ -48,10 +48,10 @@ export default {
       of: [{ type: 'save' }],
     },
     {
-      name: 'comment',
-      title: 'Comment',
+      name: 'comments',
+      title: 'Comments',
       type: 'array',
-      of: [{ type: 'comment' }],
+      of: [{ type: 'comments' }],
     },
   ],
 };
