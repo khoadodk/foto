@@ -20,13 +20,13 @@ const Feed = () => {
     if(categoryId) {
       const query = searchQuery(categoryId)
       client.fetch(query).then((data) => {
-        console.log("pins of the selected category: ", data)
+        // console.log("pins of the selected category: ", data)
         setPins(data)
         setLoading(false)
       })
     }else {
       client.fetch(feedQuery).then(data => {
-        // console.log("feed: ", data)
+        console.log("feed: ", data)
         setPins(data)
         setLoading(false)
       })

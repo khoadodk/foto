@@ -1,0 +1,25 @@
+{
+  "name": "foto",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Foto</h1>",
+  "main": "index.js",
+  "scripts": {
+    "server": "cd frontend && npm start",
+    "client": "cd backend && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khoadodk/foto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khoadodk/foto/issues"
+  },
+  "homepage": "https://github.com/khoadodk/foto#readme",
+  "devDependencies": {
+    "concurrently": "^7.2.2"
+  }
+}

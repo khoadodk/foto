@@ -4,26 +4,15 @@ import {BiSearchAlt, BiPlus, BiChevronRight,BiChevronLeft} from 'react-icons/bi'
 import {RiHome7Fill} from 'react-icons/ri'
 
 import logo from '../assets/logo.png'
-
-const categories = [
-  {name: "Animals"},
-  {name: "Nature"},
-  {name: "Funny"},
-  {name: "Food"},
-  {name: "Travel"},
-  {name: "Weird"},
-  {name: "Places"},
-  {name: "Art"},
-  {name: "Crypto"},
-]
+import {categories} from '../utils/data'
 
 const NavBar = ({searchTerm, setSearchTerm, user}) => {
 
   const navigate = useNavigate()
 
-  const isActiveStyle = "flex items-center px-2 md:px-5 gap-2 md:gap-3 font-extrabold transition-all duration-200 ease-all-in"
+  const isActiveStyle = "flex items-center px-2 md:px-5 capitalize gap-2 md:gap-3 font-extrabold transition-all duration-200 ease-all-in"
 
-  const isNotActiveStyle = "flex items-center px-2 md:px-5 gap-2 md:gap-3 text-gray-500 hover:text-black transition-all duration-200"
+  const isNotActiveStyle = "flex items-center px-2 md:px-5 capitalize gap-2 md:gap-3 text-gray-500 hover:text-black transition-all duration-200"
 
   const [isScroll, setScroll] = useState(false);
 
@@ -68,7 +57,7 @@ const NavBar = ({searchTerm, setSearchTerm, user}) => {
         </Link>
       </div>
       {/* Profile */}
-      <Link to={`user-profile/${user?._id}`} className='flex items-center justify-center shadow-lg rounded-full bg-slate-500 ml-4' >
+      <Link to={`user-profile/${user?._id}`} className='flex items-center justify-center h-10 w-10 shadow-lg rounded-full ml-4' >
         <img src={user?.image} className="rounded-full" alt="user profile" />
       </Link>
       </div>
