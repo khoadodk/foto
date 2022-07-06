@@ -4,22 +4,24 @@
 
 ## Challenges
 
+- Changes do not get updated instantly.
 - State management: Redux/Context API needed as the project getting bigger and the state is getting messier.
 - Google OAuth API is migrating to v2 causing bugs.
 
 ## Todo List
 
+- Add OAuth if user is a guest.
 - Add state management.
-- Add email/password OAuth system using firebase authentication.
+- Add category CRUD.
 
 ## Tech choice
 
 - TailwindCSS: similar to bootstrap but give you more freedom in term of styling customization.
-- Sanity CMS: the most powerful headless CMS with a good documation. They have uncached and cached APIs, GraphQL suported and React friendly.
+- Sanity CMS: One of the most powerful headless CMS with a good documation. They have uncached and cached APIs, GraphQL suported and React friendly.
 
 ## Links
 
-- [Repo](https://github.com/khoadodk/foto '<project-name> Repo')
+- [Repo](https://github.com/khoadodk/foto 'Repo')
 
 - [Live](<Homepage url> 'Live View')
 

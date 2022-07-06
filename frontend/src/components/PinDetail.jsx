@@ -95,15 +95,17 @@ const PinDetail = ({ user }) => {
                 <IoCloudDownload />
               </a>
             </div>
-            <a
-              href={pinDetail.destination}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {pinDetail.destination.length > 15
-                ? `${pinDetail.destination.slice(0, 15)}...`
-                : pinDetail.destination}
-            </a>
+            {pinDetail.destination && (
+              <a
+                href={pinDetail.destination}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {pinDetail.destination.length > 30
+                  ? `${pinDetail.destination.slice(0, 30)}...`
+                  : pinDetail.destination}
+              </a>
+            )}
           </div>
           {/* pin title */}
           <div>
